@@ -22,6 +22,17 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Gentle shadow for depth */
 }
 
+/* Book Cover */
+.book-cover {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto; /* Center the image and add spacing */
+    border: 1px solid #d3c7b7; /* Match border style to content box */
+    border-radius: 8px; /* Soft rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
 /* Headings */
 h1 {
     text-align: center;
@@ -104,6 +115,10 @@ a:hover {
     p {
         font-size: 1em; /* Adjust text size for readability */
     }
+
+    .book-cover {
+        max-width: 90%; /* Scale down for smaller screens */
+    }
 }
 
 /* Small Devices (Mobile) */
@@ -138,6 +153,10 @@ a:hover {
     footer {
         font-size: 0.8em; /* Smaller footer text for mobile */
     }
+
+    .book-cover {
+        max-width: 100%; /* Full width for mobile */
+    }
 }
 
 /* Extra Small Devices (Phones) */
@@ -161,5 +180,9 @@ a:hover {
 
     footer {
         font-size: 0.75em;
+    }
+
+    .book-cover {
+        max-width: 100%; /* Ensure it fits small screens */
     }
 }
