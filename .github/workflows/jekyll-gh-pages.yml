@@ -10,7 +10,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -48,3 +48,22 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Release job
+  release:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        with:
+          tag_name: "v${{ github.run_number }}"
+          release_name: "Deployed Site v${{ github.run_number }}"
+          body: "The latest version of the website is now live at: [${{ steps.deployment.outputs.page_url }}](${{ steps.deployment.outputs.page_url }})"
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
