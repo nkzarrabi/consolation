@@ -1,4 +1,4 @@
-#Beneath the Veil of Dante's Sorrow 
+# Beneath the Veil of Dante's Sorrow 
 
 ## Description
 This repository contains the creative work "Beneath the Veil of Dante's Sorrow," a unique and original piece by Nikou Zarrabi. The project reflects themes of philosophy, emotion, and the human experience, inspired by Dante's journey.
