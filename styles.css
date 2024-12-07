@@ -1,53 +1,114 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', Arial, sans-serif; /* Modern and clean font */
+    line-height: 1.8;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f2f5; /* Softer background for less strain */
+    color: #333; /* Neutral text color for better readability */
 }
 
 .content {
     max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.content:hover {
+    transform: scale(1.02); /* Slight enlargement on hover */
 }
 
 h1, h2 {
-    color: #333;
+    color: #222; /* Slightly darker headings for emphasis */
+    margin-top: 0;
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+    font-size: 2.8em;
+    font-weight: bold;
+    margin-bottom: 0.8em;
+    text-align: center; /* Center-align the main heading */
 }
 
 h2 {
-    font-size: 1.8em;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 1.8em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #ddd; /* Separator for better structure */
+    padding-bottom: 0.3em;
 }
 
 p {
-    margin-bottom: 1em;
-    color: #666;
+    margin-bottom: 1.2em;
+    font-size: 1.1em;
+    color: #555; /* Softer paragraph text */
 }
 
 blockquote {
     margin: 1.5em 0;
-    padding: 0.5em 1em;
-    background-color: #f9f9f9;
-    border-left: 5px solid #ccc;
-    color: #555;
+    padding: 1em 1.5em;
+    background-color: #fafafa;
+    border-left: 5px solid #00aaff; /* Brighter accent color */
+    color: #444;
+    font-style: italic;
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: #fff;
+    padding: 15px 0;
+    background-color: #222;
+    color: #f4f4f4;
+    font-size: 0.9em;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Shadow for floating effect */
+}
+
+footer a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .content {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
 }
